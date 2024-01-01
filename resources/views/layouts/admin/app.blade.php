@@ -15,6 +15,11 @@
             <li>
                 <a href="{{ route('welcome') }}">Main Site</a>
                 <a href="{{ route('admin') }}" >Admin Home</a>
+                <a href="{{ route('admin-users') }}">All Users</a>
+                <a href="#">Create Users</a>
+                <a href="#">All Posts</a>
+                <a href="#">Create Posts</a>
+
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <a :href="route('logout')"
