@@ -17,7 +17,7 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::paginate(3);
 
         return view('admin.users.index', compact(['users']));
     }
@@ -63,7 +63,7 @@ class AdminUsersController extends Controller
             Session::flash('admin_flash', 'User does not exist.');
             return redirect(route('admin-users'));
         }
-        $roles = Role::all();
+        $roles = Roles::all();
         return view('admin.users.edit', compact('roles', 'user'));
     }
 
