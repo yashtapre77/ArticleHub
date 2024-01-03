@@ -15,14 +15,17 @@
             <li>
                 <a href="{{ route('welcome') }}">Main Site</a>
                 <a href="{{ route('admin') }}" >Admin Home</a>
+
+                @if(Auth::user()->isAdmin())
                 <a href="{{ route('admin-users') }}">All Users</a>
                 <a href="{{ route('admin-users-create') }}">Create Users</a>
+                @endif
 
                 <a href="{{ route('admin-categories') }}">All Categories</a>
                 <a href="{{ route('admin-categories-create') }}">Create Categories</a>
 
-                <a href="#">All Posts</a>
-                <a href="#">Create Posts</a>
+                <a href="{{ route('admin-posts') }}">All Posts</a>
+                <a href="{{ route('admin-posts-create') }}">Create Posts</a>
 
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
