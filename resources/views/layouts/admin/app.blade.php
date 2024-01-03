@@ -17,6 +17,10 @@
                 <a href="{{ route('admin') }}" >Admin Home</a>
                 <a href="{{ route('admin-users') }}">All Users</a>
                 <a href="{{ route('admin-users-create') }}">Create Users</a>
+
+                <a href="{{ route('admin-categories') }}">All Categories</a>
+                <a href="{{ route('admin-categories-create') }}">Create Categories</a>
+
                 <a href="#">All Posts</a>
                 <a href="#">Create Posts</a>
 
